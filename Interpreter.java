@@ -46,13 +46,13 @@ public class Interpreter {
 		for (int i = 0; i < program.getFunctionDef().size(); i++) {
 			functionSource.put(program.getFunctionDef().get(i).getFunctionName(), program.getFunctionDef().get(i));
 		}
-         //    the interger in build in 
+                //  the interger in build in 
 		//compare in run function call 
 		
 		functionSource.put("PRINT", new BuiltInFunctionNode("PRINT", true, params -> {
 			int count = 0;
 			String string = " ";
-           // System.out.println("in print");
+
 			// get the global variables hash map of the InterpreterArrayDataType
 			InterpreterArrayDataType value = (InterpreterArrayDataType) (params.get("0"));
 			while (true) {// global variable could have a whole bunch so just make it loop till the number does not contain anything

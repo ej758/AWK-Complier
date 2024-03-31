@@ -7,7 +7,6 @@ import java.util.Optional;
 
 public class LexMain {
 	
-//please test in interpreter 4 unit test
 	public static void main(String[] args) throws Exception {
 		if(args.length !=1) {
 			return;

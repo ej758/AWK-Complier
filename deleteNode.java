@@ -7,11 +7,9 @@ public class deleteNode extends StatementNode{
 	 Node arrayName;
 	 Optional<LinkedList<String>> indices;
 	
-	//just a name (delete the whole array) 
-	//Example: delete a[1,2,3,4]or array reference with a comma separated list of indices.=
-	 
+	//functionality: (delete the whole array) 
+	//Example: delete a[1,2,3,4]or array reference with a comma separated list of indices.
 
-	
 	public deleteNode( Node arrayName) {
 		this.arrayName = arrayName;
 	}

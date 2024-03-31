@@ -1,6 +1,6 @@
 import java.util.Optional;
 
-//class which stores what was odne during the execution of a statement.
+//class which stores what was done during the execution of a statement.
 public class ReturnType {
 	
 	private ReturnTypes returnTypes;

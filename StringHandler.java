@@ -4,7 +4,6 @@ import java.nio.file.Paths;
 
 public class StringHandler {
 	
-	
 	private int index=0;
 	private String AWKfile;
 	

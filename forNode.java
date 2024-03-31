@@ -2,11 +2,7 @@ import java.util.Optional;
 
 public class forNode extends StatementNode{
 	
-	//get the condition in between the braces
-	//CHECK IF THE CONDITON IS IN 
-	//if it is maybe set a boolean to true so that we can make the forInarray
-	
-	//he said to peek ahead to see if the next token is in
+	//peek ahead to see if the next token
 	private Optional<Node> initialize;
 	private Optional<Node> conditiona1;
 	private Optional<Node> increment;

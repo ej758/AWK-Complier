@@ -29,7 +29,6 @@ public class whileNode extends StatementNode{
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return "WHILE " +  condition.get().toString() + " " + block.toString();
 	}
 

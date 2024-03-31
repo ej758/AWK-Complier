@@ -48,7 +48,6 @@ public class Interpreter4UnitTest {
 		      String awkPath = new File("").getAbsolutePath() + "/officeTestFile.txt";
 				Path myPath =Paths.get(awkPath);
 			
-				//its comparing optional FNR with actually FNR and its messing up
 				String doc= " {\r\n"
 						+ "		    print \"Processing line:\", $0\r\n"
 						+ "\r\n"

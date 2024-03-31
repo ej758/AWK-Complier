@@ -50,17 +50,6 @@ public class InterpreterUnitTest {
 	        splitParams.put("input", new InterpreterDataType("i-like-cheese-cake"));
 	        splitParams.put("array", new InterpreterDataType("lineSplitArray"));
 	        splitParams.put("fieldSeparator", new InterpreterDataType("-"));
-//	        BuiltInFunctionNode split = (BuiltInFunctionNode) (myInterpret.getGlobalVariables().get("split"));
-//	        assertEquals(split.execute.apply(splitParams), "4");
-//	        InterpreterArrayDataType temp = (InterpreterArrayDataType) myInterpret.getGlobalVars().get("lineSplitArray");
-//	        assertEquals(temp.getHashmap().get("1").getValue(), "i");
-//	        assertEquals(temp.getHashmap().get("2").getValue(), "like");
-//	        assertEquals(temp.getHashmap().get("3").getValue(), "cheese");
-//	        assertEquals(temp.getHashmap().get("4").getValue(), "cake");
-//	        splitParams.put("separatorArray", new InterpreterDataType("NumOfSplits"));
-//	        assertEquals(split.execute.apply(splitParams), "4");
-//	        InterpreterArrayDataType numOfSplits = ((InterpreterArrayDataType) myInterpret)..get("NumOfSplits");
-//	        assertEquals(3, numOfSplits.getHashmap().size()); // theres only three dashes
 	    }
 	  
 	
@@ -82,9 +71,6 @@ public class InterpreterUnitTest {
 	
 		   testHash.put("0", new InterpreterDataType("%s"));
 		   testHash.put("1", newA);
-		   
-		  // HashMap<String>
-
 		  String result =((BuiltInFunctionNode) print2.functionSource.get("printf")).execute.apply(testHash).toString();
 		
 	   }
@@ -118,8 +104,7 @@ public class InterpreterUnitTest {
 		   
 		   BuiltInFunctionNode bfd = (BuiltInFunctionNode) print2.getFunctionSource().get("gsub");
 		   //String result = bfd.execute.apply(testHash);
-	
-		//   assertEquals(result,"1" );
+		//  assertEquals(result,"1" );
 	   }
 	   @Test
 	    public void match() throws Exception {
@@ -149,10 +134,10 @@ public class InterpreterUnitTest {
 		   
 		   testHash.put("1",test);
 		   testHash.put("2",test2);
-		//   var retVal = ((BuiltInFunctionNode)(print2.functionSource.get("split"))).execute(testHash);
-//		   assertEquals(retVal,"2");
-		//   var str = ((BuiltInFunctionNode)print2.functionSource.get("split")).execute.apply(testHash);
-//		   System.out.println(str);
+		   var retVal = ((BuiltInFunctionNode)(print2.functionSource.get("split"))).execute(testHash);
+		   assertEquals(retVal,"2");
+		   var str = ((BuiltInFunctionNode)print2.functionSource.get("split")).execute.apply(testHash);
+		   System.out.println(str);
 		  
 		 
 	   }
@@ -382,17 +367,17 @@ public class InterpreterUnitTest {
 		   params.put(null,null);
 		   assertEquals(" ",interpreter.getIDT(v2, params).getStrings());
 		   
-		   //VariableReferenceNode vN = new VariableReferenceNode("arrayName");
-		  // InterpreterArrayData
-//		   AssignmentNode assign =new AssignmentNode(v,cont);
-//		   InterpreterDataType VR = new InterpreterDataType(assign.toString());
-//		   params.put(v.toString(),VR);
-//		   
-//		   assertEquals("5",interpreter.getIDT(assign, params).getStrings());
-//		   
-//		   VariableReferenceNode v2 = new VariableReferenceNode("FS");
-//		   params.put(null,null);
-//		   assertEquals(" ",interpreter.getIDT(v2, params).getStrings());
+		   VariableReferenceNode vN = new VariableReferenceNode("arrayName");
+		  InterpreterArrayData
+		   AssignmentNode assign =new AssignmentNode(v,cont);
+		   InterpreterDataType VR = new InterpreterDataType(assign.toString());
+		   params.put(v.toString(),VR);
+		   
+		   assertEquals("5",interpreter.getIDT(assign, params).getStrings());
+		   
+		   VariableReferenceNode v2 = new VariableReferenceNode("FS");
+		   params.put(null,null);
+		   assertEquals(" ",interpreter.getIDT(v2, params).getStrings());
 		   
 	   }
 	   @Test

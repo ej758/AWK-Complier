@@ -9,9 +9,9 @@ public class ProgramNode extends Node{
 	
 	private LinkedList<BlockNode> begin =new LinkedList<>() ;
 	private LinkedList<BlockNode> end =new LinkedList<>();
-	private LinkedList<BlockNode> other =new LinkedList<>();//Not begin or end ,just like a middle block of code
+	private LinkedList<BlockNode> other =new LinkedList<>();// middle block of code
 	
-	//you can only return in user built functions
+	//only return in user built functions
 	private LinkedList<FunctionDefinitionNode> functionDef =new LinkedList<>(); //stores a function definition node which stores 
 																				//the functionName, parameters,and statment
 																				//in form of FUNCTION name(parameters,parameters)
